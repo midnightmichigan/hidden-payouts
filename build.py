@@ -8,7 +8,7 @@ import json, os, datetime, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, '..', 'lab', 'lab14-hidden-payouts-watch', 'settlements.json')
 OUT = os.path.join(HERE, 'index.html')
-today = datetime.date(2026, 10, 2)
+today = datetime.date.today()
 
 items = json.load(open(DATA))
 verified = [i for i in items if i.get('status') == 'open']
